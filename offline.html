@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        window.addEventListener('online', () => { location.href = 'https://youtube.com/tv' })
+    </script>
+    <style>
+        body {
+            background-color: #0f0f0f;
+            color: #fff;
+            font-family: sans-serif;
+            text-align: center;
+            display: flex;
+            height: 100vh;
+            width: 100vw;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        h1 {
+            font-size: 2em;
+            padding: 0 2rem;
+        }
+        p {
+            font-size: 1.5em;
+            margin: 0;
+        }
+        article{
+            padding: 20px;
+            max-width: 32rem;
+        }
+        button {
+            background-color: #fff;
+            color: #000;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.5em;
+            margin-top: 2rem;
+            cursor: pointer;
+            border-radius: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <h1>Offline</h1>
+        <p>Sorry, you are offline. Please connect to the internet and try again.</p>
+        <button onclick="location.href = 'https://youtube.com/tv'">Try again</button>
+    </article>
+</body>
+</html>
