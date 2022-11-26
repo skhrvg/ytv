@@ -35,4 +35,17 @@ module.exports = {
       }
     }
   ],
+  publishers: [
+    {
+      name: '@electron-forge/publisher-github',
+      config: {
+        repository: {
+          owner: 'skhrvg',
+          name: 'ytv',
+        },
+        prerelease: false,
+        draft: true,
+      },
+    },
+  ],
 };
