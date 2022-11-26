@@ -1,11 +1,24 @@
 const { app, BrowserWindow } = require('electron')
 
+if (require('electron-squirrel-startup')) app.quit()
+// if first time installation on windows, do not run application, rather
+// let squirrel installer do its work
+const setupEvents = require('./win-setup')
+if (setupEvents.handleSquirrelEvent()) {
+    process.exit()
+}
+
 const createWindow = () => {
     const win = new BrowserWindow({
         width: 1280,
         height: 720,
         titleBarStyle: 'hidden',
         trafficLightPosition: { x: 16, y: 10 },
+        titleBarOverlay: process.platform !== 'darwin' ? {
+            color: '#000000',
+            symbolColor: '#ffffff',
+            height: 18
+        } : undefined,
         icon: './images/512x512@2x.png',
         title: 'ytv',
         autoHideMenuBar: true,

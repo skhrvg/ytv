@@ -10,6 +10,7 @@ module.exports = {
       config: {
         setupExe: 'ytv-setup.exe',
         usePackageJson: true,
+        loadingGif: './images/loading.gif',
       },
     },
     {
@@ -22,6 +23,7 @@ module.exports = {
           maintainer: 'Gleb Sakharov',
           homepage: 'https://github.com/skhrvg/ytv',
           section: 'video',
+          icon: './images/512x512@2x.png',
           categories: ['Video'],
         }
       }
